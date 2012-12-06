@@ -8,6 +8,7 @@ gem 'rails', '3.2.3'
 group :test do
 	gem 'capybara'
 	gem 'launchy'
+  gem 'shoulda-matchers'
 	gem 'factory_girl_rails'
 end
 

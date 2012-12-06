@@ -4,8 +4,8 @@ describe User do
 	let(:user) { User.new(first_name: "John", last_name: "Doe", email: "valid@email.com") }
 	subject { user }
 
-	it_validates "presence of", :user, :first_name
-	it_validates "presence of", :user, :last_name
+	it { should validate_presence_of :first_name }
+	it { should validate_presence_of :last_name }
 
 	describe "factory" do
 		it "creates a valid factory" do
