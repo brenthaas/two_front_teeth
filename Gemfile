@@ -6,19 +6,21 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :test do
-	gem 'capybara'
-	gem 'launchy'
+  gem 'capybara'
+  gem 'launchy'
   gem 'shoulda-matchers'
-	gem 'factory_girl_rails'
+  gem 'factory_girl_rails'
+  gem 'spork-rails'
 end
 
 group :test, :development do
-	gem 'rspec-rails'
- 	gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'rspec-rails'
+  gem 'rerun'
+  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 group :development do
-	gem 'sqlite3'
+  gem 'sqlite3'
   gem 'annotate'
 end
 
