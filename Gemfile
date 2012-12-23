@@ -8,13 +8,14 @@ gem 'rails', '3.2.3'
 group :test do
   gem 'capybara'
   gem 'launchy'
-  gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
   gem 'spork-rails'
 end
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'faker'
   gem 'rerun'
   gem 'ruby-debug19', :require => 'ruby-debug'
 end
