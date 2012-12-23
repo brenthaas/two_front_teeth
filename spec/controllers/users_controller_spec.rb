@@ -1,8 +1,16 @@
 require 'spec_helper'
 
 describe UsersController do
+  describe "GET #index" do
+    let!(:users) { FactoryGirl.create_list(:user, 5) }
+    it "assigns @users to a list of users" do
+      get :index
+      assigns(:users).should == users
+    end
+  end
+
   describe "GET #show" do
-    let!(:user) { FactoryGirl.create(:user) }
+    let(:user) { FactoryGirl.create(:user) }
     it "assigns @user for display" do
       get :show, {:id => user.to_param}
       assigns(:user).should == user
